@@ -1,0 +1,33 @@
+﻿@page "/register"
+@using Application.DTOs
+@using BlazorWebAssembly.States
+@using NetcodeHub.Packages.Components.Validations.OnInput
+
+<div class="row">
+    <div class="col-lg-5">
+        <div class="alert alert-info">@Message</div>
+        <EditForm Model="RegisterModel" OnValidSubmit="RegisterAsync">
+            <DataAnnotationsValidator />
+            <FloatingText @bind-Value="RegisterModel.Name" Label="Name" Placeholder="John Doe" Type="text" class="form-control mb-3" />
+            <FloatingText @bind-Value="RegisterModel.Email" Label="Email Address" Placeholder="JohnDoe@mail.com" Type="email" class="form-control mb-3" />
+            <FloatingText @bind-Value="RegisterModel.Password" Label="Password" Type="password" class="form-control mb-3" />
+            <FloatingText @bind-Value="RegisterModel.ConfirmPassword" Label="Confirm Password" Type="password" class="form-control mb-3" />
+            <button class="btn btn-primary" type="submit">Login</button>
+            <ValidationSummary class="text-danger" />
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    string? Message = string.Empty;
+    RegisterUserDTO RegisterModel = new();
+    async Task RegisterAsync()
+    {
+        Message = null;
+        var result = await AccountService.RegisterAccountAsync(RegisterModel);
+        if (result.Flag)
+            NavManager.NavigateTo("login", forceLoad: true);
+        else
+            Message = result.Message;
+    }
+}

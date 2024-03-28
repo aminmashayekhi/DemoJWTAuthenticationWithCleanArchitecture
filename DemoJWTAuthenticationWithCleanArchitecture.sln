@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{1AECF2B9-9207-4F8D-AA5A-C06B3D2C041E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{1AECF2B9-9207-4F8D-AA5A-C06B3D2C041E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{DAE9C968-BFDC-40AD-A9B0-6A75E10472BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{DAE9C968-BFDC-40AD-A9B0-6A75E10472BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{A265D88B-5E80-4D36-AC61-1872A3C97E93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{A265D88B-5E80-4D36-AC61-1872A3C97E93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{AEE590D4-B188-49EA-BE0E-026079EF3C1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{AEE590D4-B188-49EA-BE0E-026079EF3C1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAssembly", "BlazorWebAssembly\BlazorWebAssembly.csproj", "{848EC343-2537-4F0D-95CC-8E86816DE12E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AEE590D4-B188-49EA-BE0E-026079EF3C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEE590D4-B188-49EA-BE0E-026079EF3C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEE590D4-B188-49EA-BE0E-026079EF3C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{848EC343-2537-4F0D-95CC-8E86816DE12E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{848EC343-2537-4F0D-95CC-8E86816DE12E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{848EC343-2537-4F0D-95CC-8E86816DE12E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{848EC343-2537-4F0D-95CC-8E86816DE12E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

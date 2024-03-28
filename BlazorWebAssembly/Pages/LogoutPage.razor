@@ -1,0 +1,12 @@
+﻿@page "/logout"
+@using BlazorWebAssembly.States
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        var customAuthStateProvider = (CustomAuthenticationStateProvider)AuthStateProvider;
+        await customAuthStateProvider.UpdateAuthenticationAsync(null!);
+        NavManager.NavigateTo("/", forceLoad: true);
+    }
+
+}
